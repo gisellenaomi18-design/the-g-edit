@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The G Edit</title>
+<meta name="description" content="Giselle's planner: today, calendar, tasks, goals, habits and the Sunday Edit.">
+<meta name="theme-color" content="#F1E4D1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="The G Edit">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/nunito-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css?v=202610212240">
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<div class="splash" id="splash"><div class="brand">The G <em>Edit</em></div></div>
+
+<div class="auth" id="auth" hidden>
+  <form class="card auth-card" id="auth-form" novalidate>
+    <div class="brand">The G <em>Edit</em></div>
+    <p id="auth-msg">Sign in to open your planner on this device.</p>
+    <label class="sub" for="auth-email" style="display:block;margin:6px 0 6px">Email</label>
+    <input class="field" id="auth-email" type="email" autocomplete="email" inputmode="email" required>
+    <label class="sub" for="auth-pass" style="display:block;margin:6px 0 6px">Password</label>
+    <input class="field" id="auth-pass" type="password" autocomplete="current-password" minlength="6" required>
+    <div class="auth-err" id="auth-err" role="alert"></div>
+    <button class="btn primary" type="submit" id="auth-go">Sign in</button>
+    <div class="chips" style="justify-content:space-between;margin-top:16px">
+      <button type="button" class="linkish" id="auth-switch">First time? Create your account</button>
+      <button type="button" class="linkish" id="auth-forgot">Forgot password?</button>
+    </div>
+  </form>
+</div>
+
+<div class="shell" id="shell" hidden>
+  <aside class="side" id="side" aria-label="Sections"></aside>
+  <div style="min-width:0">
+    <header class="mtop" id="mtop"></header>
+    <main class="main" id="main">
+      <section id="v-today" class="view"></section>
+      <section id="v-calendar" class="view" hidden></section>
+      <section id="v-tasks" class="view" hidden></section>
+      <section id="v-goals" class="view" hidden></section>
+      <section id="v-habits" class="view" hidden></section>
+      <section id="v-lists" class="view" hidden></section>
+      <section id="v-cleaning" class="view" hidden></section>
+      <section id="v-sunday" class="view" hidden></section>
+      <section id="v-personalize" class="view" hidden></section>
+      <section id="v-board" class="view" hidden>
+        <div class="page-h"><div><div class="eyebrow">Dream it · Pin it</div><h1>Vision <em>board</em></h1></div></div>
+        <div id="board-top"></div>
+        <div class="board-wrap"><div id="board" class="board bg-pearl"></div></div>
+        <input type="file" id="photo-in" accept="image/*" multiple hidden>
+        <div class="card sketch-panel">
+          <div class="card-h"><h2>Sketch <em>pad</em></h2><span class="count">Draw, then pin it</span></div>
+          <div class="sk-tools" id="sk-tools"></div>
+          <div class="paper"><canvas id="sketch" width="1200" height="800" aria-label="Drawing canvas"></canvas></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+<nav class="bottombar" id="bottombar" aria-label="Sections" hidden></nav>
+<div id="sheet-root"></div>
+<div id="fx" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div class="overlay" id="breathe" hidden>
+  <div class="breathe">
+    <div class="orb" id="orb"></div>
+    <div><h2 id="b-text">Breathe in</h2><p id="b-sub">One quiet minute</p></div>
+    <button class="btn" data-act="breathe-close">I'm done</button>
+  </div>
+</div>
+<script>window.GEDIT_VERSION = "202610212240";</script>
+<script src="config.js?v=202610212240"></script>
+<script src="app.js?v=202610212240"></script>
+</body>
+</html>
