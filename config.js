@@ -1,13 +1,10 @@
-/*
-  The G Edit — your sync settings.
-  Paste the firebaseConfig values from Firebase (Project settings › Your apps › Web app) below.
-  These keys are safe to publish: your data is protected by your sign-in and the database rules.
-*/
+/* The G Edit — your sync settings (Firebase project: the-g-edit).
+   These keys are safe to publish: your data is protected by your sign-in and the database rules. */
 window.GEDIT_FIREBASE = {
-  apiKey: "PASTE_API_KEY",
-  authDomain: "PASTE_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_PROJECT_ID",
-  storageBucket: "PASTE_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_SENDER_ID",
-  appId: "PASTE_APP_ID"
+  apiKey: "AIzaSyAf3mXjyr4EaXAjL_kJpvC59en84szrOfA",
+  authDomain: "the-g-edit.firebaseapp.com",
+  projectId: "the-g-edit",
+  storageBucket: "the-g-edit.firebasestorage.app",
+  messagingSenderId: "1020231386937",
+  appId: "1:1020231386937:web:35db7ef98ee07a8020cae8"
 };
