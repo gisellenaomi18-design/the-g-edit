@@ -1,11 +1,12 @@
 /* The G Edit — offline support. Version changes with every release so updates arrive. */
-const VERSION = "202610281942";
+const VERSION = "202610281951";
 const CACHE = "gedit-" + VERSION;
 const SHELL = ["./", "index.html", "styles.css?v=" + VERSION, "app.js?v=" + VERSION, "config.js?v=" + VERSION, "manifest.webmanifest",
-  "fonts/fraunces-latin-500-normal.woff2", "fonts/fraunces-latin-600-normal.woff2", "fonts/fraunces-latin-500-italic.woff2", "fonts/fraunces-latin-600-italic.woff2",
-  "fonts/nunito-latin-400-normal.woff2", "fonts/nunito-latin-600-normal.woff2", "fonts/nunito-latin-700-normal.woff2", "fonts/nunito-latin-800-normal.woff2",
-  "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png"];
-self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); });
+  "fraunces-latin-500-normal.woff2", "fraunces-latin-600-normal.woff2", "fraunces-latin-500-italic.woff2", "fraunces-latin-600-italic.woff2",
+  "nunito-latin-400-normal.woff2", "nunito-latin-600-normal.woff2", "nunito-latin-700-normal.woff2", "nunito-latin-800-normal.woff2",
+  "icon-192.png", "icon-512.png", "apple-touch-icon.png"];
+// cache each file on its own, so one missing file never stops the app's background helper from starting
+self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => Promise.all(SHELL.map(u => c.add(u).catch(() => {}))))); });
 self.addEventListener("message", e => { if (e.data === "skip") self.skipWaiting(); });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith("gedit-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
@@ -28,7 +29,7 @@ self.addEventListener("push", e => {
   let d = {}; try { d = e.data ? e.data.json() : {}; } catch (er) { d = { data: { body: e.data && e.data.text() } }; }
   const x = Object.assign({}, d.notification || {}, d.data || {});
   e.waitUntil(self.registration.showNotification(x.title || "The G Edit", {
-    body: x.body || "", icon: "icons/icon-192.png", badge: "icons/icon-192.png", tag: x.tag || undefined, data: { url: x.url || "./" }
+    body: x.body || "", icon: "icon-192.png", badge: "icon-192.png", tag: x.tag || undefined, data: { url: x.url || "./" }
   }));
 });
 self.addEventListener("notificationclick", e => {
