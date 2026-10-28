@@ -1,5 +1,5 @@
 /* The G Edit — offline support. Version changes with every release so updates arrive. */
-const VERSION = "202610281655";
+const VERSION = "202610281707";
 const CACHE = "gedit-" + VERSION;
 const SHELL = ["./", "index.html", "styles.css?v=" + VERSION, "app.js?v=" + VERSION, "config.js?v=" + VERSION, "manifest.webmanifest",
   "fonts/fraunces-latin-500-normal.woff2", "fonts/fraunces-latin-600-normal.woff2", "fonts/fraunces-latin-500-italic.woff2", "fonts/fraunces-latin-600-italic.woff2",
@@ -21,4 +21,21 @@ self.addEventListener("fetch", e => {
     if (res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); }
     return res;
   })));
+});
+
+/* reminders: show the notification, and open the right page when tapped */
+self.addEventListener("push", e => {
+  let d = {}; try { d = e.data ? e.data.json() : {}; } catch (er) { d = { data: { body: e.data && e.data.text() } }; }
+  const x = Object.assign({}, d.notification || {}, d.data || {});
+  e.waitUntil(self.registration.showNotification(x.title || "The G Edit", {
+    body: x.body || "", icon: "icons/icon-192.png", badge: "icons/icon-192.png", tag: x.tag || undefined, data: { url: x.url || "./" }
+  }));
+});
+self.addEventListener("notificationclick", e => {
+  e.notification.close();
+  const url = new URL((e.notification.data && e.notification.data.url) || "./", self.registration.scope).href;
+  e.waitUntil(self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(list => {
+    for (const c of list) if ("focus" in c) { if ("navigate" in c) c.navigate(url).catch(() => {}); return c.focus(); }
+    return self.clients.openWindow(url);
+  }));
 });
