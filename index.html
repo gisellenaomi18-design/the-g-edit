@@ -15,7 +15,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/nunito-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=202610222123">
+<link rel="stylesheet" href="styles.css?v=202610281636">
 </head>
 <body>
 <div class="sky" id="sky" aria-hidden="true"></div>
@@ -47,6 +47,8 @@
       <section id="v-calendar" class="view" hidden></section>
       <section id="v-tasks" class="view" hidden></section>
       <section id="v-goals" class="view" hidden></section>
+      <section id="v-projects" class="view" hidden></section>
+      <section id="v-wellness" class="view" hidden></section>
       <section id="v-habits" class="view" hidden></section>
       <section id="v-lists" class="view" hidden></section>
       <section id="v-cleaning" class="view" hidden></section>
@@ -67,9 +69,18 @@
   </div>
 </div>
 <nav class="bottombar" id="bottombar" aria-label="Sections" hidden></nav>
+<button class="fab" id="fab" data-act="quick" aria-label="Quick add" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
 <div id="sheet-root"></div>
 <div id="fx" aria-hidden="true"></div>
 <div id="toast" role="status" aria-live="polite"></div>
+<div class="overlay quote" id="quote" hidden>
+  <div class="qcard card">
+    <div class="eyebrow">Week closed</div>
+    <p class="q-text" id="q-text"></p>
+    <p class="q-by" id="q-by"></p>
+    <button class="btn pinkb" data-act="quote-close">Make room for next week ✦</button>
+  </div>
+</div>
 <div class="overlay" id="breathe" hidden>
   <div class="breathe">
     <div class="orb" id="orb"></div>
@@ -77,8 +88,8 @@
     <button class="btn" data-act="breathe-close">I'm done</button>
   </div>
 </div>
-<script>window.GEDIT_VERSION = "202610222123";</script>
-<script src="config.js?v=202610222123"></script>
-<script src="app.js?v=202610222123"></script>
+<script>window.GEDIT_VERSION = "202610281636";</script>
+<script src="config.js?v=202610281636"></script>
+<script src="app.js?v=202610281636"></script>
 </body>
 </html>
