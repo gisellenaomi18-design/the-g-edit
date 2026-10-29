@@ -1,5 +1,5 @@
 /* The G Edit — offline support. Version changes with every release so updates arrive. */
-const VERSION = "202610291130";
+const VERSION = "202610291700";
 const CACHE = "gedit-" + VERSION;
 const SHELL = ["./", "index.html", "styles.css?v=" + VERSION, "app.js?v=" + VERSION, "config.js?v=" + VERSION, "manifest.webmanifest",
   "fraunces-latin-500-normal.woff2", "fraunces-latin-600-normal.woff2", "fraunces-latin-500-italic.woff2", "fraunces-latin-600-italic.woff2",
