@@ -862,3 +862,4 @@ body.wrapped-open{overflow:hidden}
   body.side-open .side .sync{padding:8px 12px;justify-content:flex-start}
   body.side-open .nav-label{font-size:10.5px;padding:6px 12px 4px;border-top:0;margin:0}
 }
+.ev-add label,.ev-times label{min-width:0;display:block}input.field[type=time],input.field[type=date]{-webkit-appearance:none;appearance:none;display:block;min-width:0;width:100%;max-width:100%;min-height:46px;text-align:left;background-image:none;padding-right:12px}input.field[type=time]::-webkit-date-and-time-value,input.field[type=date]::-webkit-date-and-time-value{text-align:left}.dayview.gd .hrow{height:60px}@media (max-width:520px){.ev-times{grid-template-columns:1fr 1fr!important}.ev-times label:first-child{grid-column:1/-1}}
