@@ -902,3 +902,6 @@ body.in-board .fab{display:none}.nudge{display:inline-flex;gap:4px}.b-note{margi
 
 /* sync details */
 .sync-det{margin:6px 0 10px;background:var(--field);border-radius:14px;padding:10px 14px}.sync-det summary{cursor:pointer;font-weight:800;color:var(--ink2)}.sd-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-top:10px;font-size:13.5px}.sd-grid span{color:var(--ink2)}.sd-grid b{font-weight:800;overflow-wrap:anywhere;text-align:right}
+
+/* loading gate */
+#gs-gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px;background:color-mix(in srgb,var(--bg0) 85%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}#gs-gate[hidden]{display:none}.gsg-card{max-width:420px;background:var(--card-solid,#fff);border-radius:26px;padding:26px;text-align:center;box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}.gsg-card h2{margin:10px 0 8px}.gsg-card p{color:var(--ink2);font-size:14.5px;margin:0 0 10px}.gsg-res{font-weight:700;color:var(--ink)}.gsg-spin{width:34px;height:34px;margin:0 auto;border-radius:50%;border:4px solid var(--line);border-top-color:var(--pink);animation:gsspin 1s linear infinite}@keyframes gsspin{to{transform:rotate(360deg)}}
