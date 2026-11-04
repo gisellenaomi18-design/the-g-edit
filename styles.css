@@ -911,3 +911,198 @@ body.in-board .fab{display:none}.nudge{display:inline-flex;gap:4px}.b-note{margi
 
 /* time blocking, waiting on, morning plan */
 .pz-tray{background:var(--glass0,var(--field));border-radius:18px;padding:10px 12px;margin:0 0 10px}.pz-tt{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink2);margin-bottom:8px}.pz-hint{text-transform:none;letter-spacing:0;font-weight:700;color:var(--muted)}.pz-chips{display:flex;flex-wrap:wrap;gap:6px}.pz-chip{display:inline-flex;align-items:center;gap:6px;border-radius:12px;padding:8px 11px;font:800 13px Nunito,sans-serif;background:color-mix(in srgb,var(--blue) 12%,var(--card-solid,#fff));color:var(--blue);cursor:grab;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.pz-chip span{font-weight:700;opacity:.7}.pz-chip.pz-src{opacity:.35}.pz-float{position:fixed;left:0;top:0;z-index:300;pointer-events:none;background:var(--blue);color:#fff;box-shadow:0 14px 28px -10px rgba(9,0,135,.6)}.pz-float[data-at]:after{content:attr(data-at);margin-left:8px;font-weight:700;opacity:.85}.hslot.pz-over{background:color-mix(in srgb,var(--blue) 12%,transparent)!important}.gd-ev.pz-tk{flex-direction:row!important;align-items:flex-start!important;gap:8px;background:var(--card-solid,#fff)!important;border:1px solid var(--line)!important;border-left:3px solid var(--blue)!important;padding:5px 9px!important;cursor:grab;white-space:normal}.gd-ev.pz-tk.personal{border-left-color:var(--pink)!important}.gd-ev.pz-tk.gd-short{align-items:center!important;padding:2px 9px!important}.pz-tx{min-width:0;flex:1;display:block}.pz-tx b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pz-tx .gd-tm{display:block!important;min-width:0;font-size:12px;font-weight:700;color:var(--ink2)}.gd-short .pz-tx{display:flex;align-items:center;gap:8px;white-space:nowrap}.gd-short .pz-tx b{flex:0 1 auto;min-width:0;order:0}.gd-short .pz-tx .gd-tm{display:inline!important;flex:none;order:1}@media (max-width:700px){.gd-short .pz-end{display:none}}.pz-tk.done .pz-tx b{text-decoration:line-through;opacity:.55}.pz-ck{flex:none;width:17px;height:17px;border-radius:5px;border:2px solid var(--blue);display:grid;place-items:center;font-size:11px;font-weight:900;line-height:1;padding:0;margin-top:1px;background:transparent;color:#fff}.pz-tk.personal .pz-ck{border-color:var(--pink)}.gd-short .pz-ck{margin-top:0}.pz-tk.done .pz-ck{background:var(--blue)}.pz-tk.personal.done .pz-ck{background:var(--pink)}.dash .pz-wcard{grid-column:1/-1!important;padding-bottom:16px}.pz-wlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;align-items:start}.pz-witem{background:var(--field);border-radius:16px;padding:10px 12px;display:flex;flex-direction:column;gap:8px}.pz-wcard .pz-wrow{display:flex;align-items:center;gap:10px}.pz-av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;flex:none}.pz-wmain{flex:1;min-width:0;text-align:left;background:none;padding:0;color:var(--ink)}.pz-wmain b{display:block;font-weight:800}.pz-wmain span{font-size:12.5px;font-weight:700;color:var(--ink2)}.pz-days{font-size:12px;font-weight:800;color:var(--ink2);white-space:nowrap}.pz-days.late{color:var(--pink)}.pz-wacts{display:flex;flex-wrap:wrap;gap:6px}.pz-wacts{flex-wrap:nowrap}.pz-wacts .btn{padding:6px 10px;font-size:12px;white-space:nowrap}.pz-more{background:none;font:800 13px Nunito,sans-serif;color:var(--blue);padding:8px 0 0}.pz-wtag{color:var(--pink);font-weight:800}.pz-wbox{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--field);border-radius:14px;padding:10px 12px;font-weight:700}.pz-orow{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line);font-weight:700}.pz-orow:first-of-type{border-top:0}.pz-orow>span{flex:1;min-width:0}.pz-ch{display:flex;gap:4px;flex:none}.pz-ch button{border-radius:999px;padding:5px 9px;font:800 12px Nunito,sans-serif;background:var(--field);color:var(--blue)}.pz-ch button.on{background:var(--blue);color:#fff}.pz-top{display:flex;width:100%;align-items:center;gap:10px;text-align:left;border-radius:12px;padding:9px 12px;margin-bottom:6px;background:var(--field);font:800 14px Nunito,sans-serif;color:var(--ink)}.pz-top span{color:var(--muted);font-size:16px}.pz-top.on{background:color-mix(in srgb,#F5C33B 30%,var(--card-solid,#fff))}.pz-top.on span{color:#C98A00}.pz-top small{margin-left:auto;font-weight:700;color:var(--ink2)}.pz-wt{width:120px;padding:6px 10px}@media (min-width:1241px){.dash .c-goals{grid-row:span 2}}
+
+/* ---------- calmer surfaces: fewer boxes ---------- */
+.card{-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none;border-radius:18px;background:color-mix(in srgb,var(--card-solid,#fff) 78%,transparent);border:1px solid var(--line)}
+/* secondary sections sit on the page, separated by a hairline */
+.dash .c-verse,.dash .c-sched,.dash .c-goals,.dash .c-wheel,.dash .c-week,.dash .c-wellness,.dash .c-next{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:18px 4px 6px;box-shadow:none}
+.dash .c-verse{padding:16px 4px}
+.dash .c-verse .mark{background:transparent!important}
+/* week strip: only the selected day is filled */
+.day{background:transparent;border:1px solid transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.day:not(.sel):hover{background:var(--field)}
+.day.today:not(.sel){border-color:var(--line)}
+/* chips & notes lose their frosted pill */
+.prog.pchip{background:transparent;border:0;padding-left:0}
+.pill-note{background:transparent;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;padding-left:0}
+.seg{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0;gap:18px}
+.seg button{border-radius:0!important;background:transparent!important;box-shadow:none!important;padding:8px 2px!important;border-bottom:2px solid transparent!important;color:var(--ink2)}
+.seg button.on{border-bottom-color:var(--blue)!important;color:var(--blue)}
+.filters .seg{width:auto}
+.arrange-btn{background:transparent!important;border:0!important}
+/* add rows: a quiet underline instead of a filled box */
+.card .add input{background:transparent;border:0;border-bottom:1.5px solid var(--line);border-radius:0;padding:10px 2px}
+.card .add input:focus{background:transparent;border-bottom-color:var(--blue)}
+.card .plus{width:38px;height:38px;border-radius:12px;box-shadow:none;font-size:20px}
+/* waiting on: rows, not tiles; small actions become text buttons */
+.pz-witem{background:transparent!important;border-radius:0!important;padding:10px 0!important;border-bottom:1px solid var(--line)}
+.pz-wlist{gap:0 28px!important}
+.pz-wacts .btn:not(.pinkb){background:transparent;border:0;padding:6px 4px;color:var(--blue)}
+.pz-wacts{padding-left:44px}
+/* sidebar: no filled boxes */
+.nav-btn[aria-current="page"]{background:transparent;box-shadow:none;border:0;color:var(--blue);position:relative}
+.nav-btn[aria-current="page"]::before{content:"";position:absolute;left:-2px;top:9px;bottom:9px;width:3px;border-radius:3px;background:var(--blue)}
+.nav-sun{background:transparent;color:var(--pink-text)}
+.nav-search{border:0;border-bottom:1px solid var(--line);border-radius:0}
+/* schedule: events as rows with a colored line, not tinted boxes */
+.c-sched .ev-body{background:transparent!important;border-radius:0;padding:6px 6px 6px 16px}
+.c-sched .ev-body::before{left:0;top:7px;bottom:7px}
+.c-sched .evs{gap:4px}
+/* secondary actions as text links */
+.dash .ev-new,.dash .c-wheel .btn.pinkb{background:transparent!important;border:0!important;box-shadow:none!important;padding:6px 0!important;color:var(--blue)!important;font-weight:800}
+.dash .c-wheel .btn.pinkb{color:var(--pink-text,var(--pink))!important}
+.dash .c-wheel .btn.pinkb::after{content:" \203A"}
+/* the + buttons in secondary sections go quiet */
+.dash .c-goals .plus,.dash .c-wheel .plus{background:transparent;color:var(--pink);box-shadow:none;border:1.5px solid color-mix(in srgb,var(--pink) 35%,transparent)}
+/* more air between sections now that boxes don't separate them */
+.dash{gap:26px 30px}
+.dash .c-verse,.dash .c-sched,.dash .c-goals,.dash .c-wheel,.dash .c-week,.dash .c-wellness,.dash .c-next{padding-top:22px}
+.dash .c-goals .grat,.dash .c-goals .sub{margin-top:14px}
+/* calendar week: one surface, days separated by hairlines */
+.wcols{gap:0;background:color-mix(in srgb,var(--card-solid,#fff) 78%,transparent);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.wcols>.wcol{border:0;border-radius:0;background:transparent;box-shadow:-1px -1px 0 var(--line)}
+.wcols>.wcol.today{outline:0;background:color-mix(in srgb,var(--blue) 5%,transparent)}
+.wcols>.wcol.today h3 b{color:var(--blue)}
+/* personalize tabs: underlined, like Today's filters */
+.ptabs{gap:20px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.ptabs button{background:transparent;border-radius:0;padding:9px 2px;border-bottom:2px solid transparent}
+.ptabs button.on{background:transparent;color:var(--blue);border-bottom-color:var(--blue)}
+
+
+/* ================= The G Edit design system =================
+   Spacing  4 · 8 · 12 · 16 · 24 · 32 · 48 · 64
+   Type     12 label · 14 secondary · 16 body · 22 section · 30 big number · 56 page (34 on phone)
+   Weights  Nunito 400 / 700 · Fraunces 600 (+ 500 italic accents)
+   Radii    8 small · 12 medium · 18 card · full
+   Buttons  44 main · 36 secondary · text link
+   ============================================================ */
+:root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;
+--t-xs:12px;--t-sm:14px;--t-md:16px;--t-lg:22px;--t-xl:30px;
+--r-sm:8px;--r-md:12px;--r-lg:18px}
+
+/* ---- type: one label style, one secondary, one body ---- */
+.eyebrow,.sub,.fl,.pz-tt,.dow,.wcol h3,.step,.whwr-top span{font-size:var(--t-xs)!important;font-weight:700!important;letter-spacing:.14em!important;text-transform:uppercase}
+.meta,.meta span,.tag,.count,.pz-days,.pz-wtag,.sk-d,.gd-tm,.room,.tc-l,.tg-n{font-size:var(--t-xs)!important;font-weight:700!important}
+.empty,p.empty,div.empty,li.empty,span.empty,.p-note,.tc-hint,.gsec-p,.pz-wmain span,.sd-grid span{font-size:var(--t-sm)!important;font-weight:400!important}
+.task,.t-text,.pz-wmain b,.set-row>span>b,.set-row,.loop b,.ev-body b,.sk-row,.pz-top,.pz-orow{font-size:var(--t-md)!important}
+.pz-wmain b,.set-row>span>b,.loop b,.ev-body b,.gc-pb b{font-weight:700!important}
+.chip,.seg button,.ptabs button,.btn.small,.theme,.stp,.navpair span{font-size:var(--t-sm)!important;font-weight:700!important}
+.card-h h2,.sheet h2,.tg-h h2,.gsec-h .h2,.whwr-area h2,.pz-wcard h2{font-size:var(--t-lg)!important;font-weight:600!important;font-family:var(--f-display)!important;line-height:1.2}
+.stat b,.day b{font-size:var(--t-xl)!important}
+b,strong{font-weight:700}
+.btn,.chip,.seg button,.tag,.meta,.empty,.sub,.fl,.eyebrow{font-weight:700}
+body .glow-row .g-n{font-size:var(--t-md)!important}
+
+/* ---- spacing: cards, rows, sections ---- */
+.card{padding:var(--s5)!important}
+.card-h{margin-bottom:var(--s4)!important;min-height:44px}
+.task{min-height:48px;padding:var(--s2) 0!important;gap:var(--s3)!important}
+.tasks{display:flex;flex-direction:column}
+.meta{gap:var(--s2)!important;margin-top:2px}
+.add,.sk-sadd{margin-top:var(--s4)!important;gap:var(--s2)!important}
+.chips{gap:var(--s2)!important}
+.fl{margin:var(--s5) 0 var(--s2)!important}
+.sub{margin:var(--s5) 0 var(--s3)!important}
+.foot{margin-top:var(--s5)!important;gap:var(--s3)!important;align-items:center}
+.dash{gap:var(--s5) var(--s6)!important}
+.below-week{margin:var(--s4) 0 var(--s5)!important;gap:var(--s3)}
+.hello{margin-bottom:var(--s5)}
+.week{gap:var(--s2)!important}
+.pz-wlist{gap:0 var(--s6)!important}
+.pz-witem{padding:var(--s3) 0!important;gap:var(--s2)!important}
+.set-row{padding:var(--s3) 0!important;gap:var(--s4)!important;min-height:56px}
+.sheet{padding:var(--s5)!important}
+.sheet h2{margin-bottom:var(--s2)!important}
+.evs{gap:var(--s2)!important}
+.wcol{padding:var(--s4)!important;gap:var(--s2)!important}
+
+/* ---- corners: 8 / 12 / 18 / full ---- */
+.card,.wcols,.pz-tray{border-radius:var(--r-lg)!important}
+.field,.add input,textarea.field,select.field,.sk-srow,.pz-wbox,.pz-top,.gc-q,.gc-pb,.lg,.tc,.ev-body,.wev,.gd-ev,.mchip,.pz-chip,.loop,.stat,.whwr-nums button,.theme,.day{border-radius:var(--r-md)!important}
+.tag,.sk-ck,.pz-ck,.sk-dl,.plus,.kbd,kbd{border-radius:var(--r-sm)!important}
+.plus{border-radius:var(--r-md)!important}
+.btn,.chip,.pill-note,.seg,.sk-chip{border-radius:999px!important}
+.sheet{border-radius:24px!important}
+@media (max-width:720px){.sheet{border-radius:24px 24px 0 0!important;padding:var(--s4) var(--s4) calc(var(--s5) + env(safe-area-inset-bottom,0px))!important}.card{padding:var(--s4)!important}}
+
+/* ---- buttons: 44 main · 36 secondary · text ---- */
+.btn{min-height:44px;padding:0 var(--s5)!important;display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);font-size:var(--t-md)!important}
+.btn.small,.pz-wacts .btn{min-height:36px;padding:0 var(--s4)!important;font-size:var(--t-sm)!important}
+.chip{min-height:36px;padding:0 var(--s4)!important;display:inline-flex;align-items:center}
+.plus{width:44px!important;height:44px!important;flex:none}
+.field,.add input,select.field{min-height:44px}
+
+/* ---- tap targets: at least 44px for every control ---- */
+.card-link{min-height:44px;display:inline-flex;align-items:center}
+.x,.sk-dclr{width:36px!important;height:36px!important;opacity:.7}
+.gdot,.bgdot,.hab-color button,.board-bg button{min-width:36px;min-height:36px}
+.seg button,.ptabs button{min-height:44px}
+.nav-btn{min-height:44px}
+.chk{position:relative}.chk::after{content:"";position:absolute;inset:-10px}
+.switch{position:relative}.switch::before{content:"";position:absolute;inset:-8px -4px}
+.sk-chip{min-height:32px;padding:0 var(--s3)!important}
+.pz-chip{min-height:40px}
+
+/* ---- second pass: everything still off the system ---- */
+/* month & week strip */
+.month-dots i,.mchip,.day small,.day b+small{font-size:var(--t-xs)!important;font-weight:700!important}
+.mcell{gap:var(--s1)!important;padding:var(--s2)!important;border-radius:var(--r-md)!important}
+.month-dots i{border-radius:var(--r-sm)!important}
+.day{gap:var(--s1)!important;padding:var(--s3) var(--s1)!important}
+.wk-nav,.navpair button{font-size:var(--t-md)!important;border-radius:var(--r-md)!important;min-width:44px;min-height:44px}
+/* stats, steps, small notes */
+.stat{padding:var(--s4)!important}.stat span{font-size:var(--t-xs)!important;font-weight:700!important}
+.stp{gap:var(--s2)!important}.stp i{font-size:var(--t-xs)!important}
+.b-note,.wh-sub,cite{font-size:var(--t-sm)!important}
+.card-link .go{font-size:var(--t-lg)!important}
+.plus{font-size:22px!important}
+/* gaps on the grid */
+.card-h,.tg-h,.gsec-h,.glow-row,.head-tools{gap:var(--s3)!important}
+.page-h{gap:var(--s4)!important;margin-bottom:var(--s5)!important}
+.kanban,.two,.cal-wrap,.nb-grid{gap:var(--s5)!important}
+.seg{gap:var(--s4)!important}
+.ptabs{gap:var(--s5)!important}
+.card-link,.grat,.nb-folders,.month-dots,.btn.small{gap:var(--s2)!important}
+.month{gap:var(--s2)!important}
+/* paddings */
+.field,.add input,textarea.field,select.field,.theme,input.field.hex{padding:var(--s3) var(--s4)!important}
+.card .add input{padding:var(--s3) var(--s1)!important}
+.count{padding:0 var(--s2)!important}
+.tg-h,.wh-sun{padding:var(--s4) 0!important}
+.empty,li.empty,p.empty,div.empty{padding:var(--s2) 0!important}
+.ptabs button{padding:var(--s3) 0!important}
+.tg-n{padding:0 var(--s2)!important}
+/* corners */
+.moodstrip>div,.color-row input,.glow-row input,.mark,.wh-sun,.glowbox,.board-wrap{border-radius:var(--r-md)!important}
+.sw i,.bar,.bar i{border-radius:var(--r-sm)!important}
+/* swatches & color dots big enough to tap */
+.cdot,.bgs button{min-width:36px!important;min-height:36px!important;width:36px!important;height:36px!important}
+.colors,.bgs{gap:var(--s2)!important}
+/* weights: no extra-bold */
+.gdot b,.moodstrip>div,.day small,.mchip,.stat span{font-weight:700!important}
+.kcol,.tc-row,.sun-nav,.wh-freq,.pill-note{gap:var(--s3)!important}
+.verse,.lists2,.lix,.set-grid,.gempty,.gsec .card{gap:var(--s4)!important}
+.moodstrip{gap:var(--s2)!important}
+.glow-row{padding:var(--s2) 0!important}.glow-row .x{font-size:var(--t-md)!important}
+.mchip{padding:var(--s1) var(--s2)!important}
+.set-row span,cite,.navpair button,.p-adv summary{font-weight:700!important}
+
+/* ---- hierarchy: what you act on comes first ---- */
+.dash>.c-work,.dash>.c-personal{order:0}
+.dash>.pz-wcard{order:1}
+.dash>.c-sched,.dash>.c-goals,.dash>.c-wheel,.dash>.c-next,.dash>.c-wellness,.dash>.c-week{order:2}
+.dash>.c-verse{order:3}
+/* pop-up footer: one main button; the rest are quiet */
+.sheet .foot .chips .btn.small{background:transparent!important;border:0!important;padding:0 var(--s2)!important;color:var(--ink2)}
+.sheet .foot .chips .btn.small.pinkb{color:var(--pink)!important}
+.sheet .foot .btn.danger{color:#C2264B!important}
+/* "More options" fold */
+.ds-more{margin-top:var(--s5);border-top:1px solid var(--line);padding-top:var(--s2)}
+.ds-more summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:var(--s3);font-weight:700;font-size:var(--t-md)}
+.ds-more summary::-webkit-details-marker{display:none}
+.ds-more summary span{font-weight:400;font-size:var(--t-sm);color:var(--ink2);text-align:right;flex:1}
+.ds-more summary::after{content:"\203A";font-size:22px;color:var(--muted);transition:transform .2s}
+.ds-more[open] summary::after{transform:rotate(90deg)}
+@media (min-width:1101px){.cal-wrap{grid-template-columns:minmax(0,1.7fr) minmax(360px,1fr)!important}}
+@media (max-width:720px){.day b{font-size:var(--t-lg)!important}.day{padding:var(--s2) 0!important}}
+
