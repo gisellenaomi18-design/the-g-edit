@@ -1135,3 +1135,28 @@ body .glow-row .g-n{font-size:var(--t-md)!important}
 .mbar.hol{background:color-mix(in srgb,#2E9E6B 16%,var(--card-solid,#fff));color:#17603F}
 body.look-dark .mbar.hol{color:#9BE3BF}
 @media (max-width:720px){.mbar{font-size:10.5px;padding:0 4px}}
+
+/* ===== edits34: un-AI-slop pass ===== */
+/* labels: plain sentence case, no wide letter-spacing (weekday headers keep caps) */
+.eyebrow,.sub,.fl,.sheet .fl,.pz-tt,.nav-label,.kcol h3,.pk-h,.ls-sh h3,.wr-eyebrow,.brand small{text-transform:none!important;letter-spacing:0!important}
+.sub,.fl,.sheet .fl,.pz-tt,.kcol h3,.pk-h,.ls-sh h3{font-size:14px!important;font-weight:700!important;color:var(--ink)!important}
+.nav-label{font-size:13px!important;font-weight:700!important;color:var(--muted)!important}
+/* date sits under the greeting instead of a tagline above it */
+.hello-date{margin:6px 0 0;font-size:16px;font-weight:600;color:var(--ink2);font-variant-numeric:tabular-nums}
+/* readable secondary text (was 4.4:1, now 5.5:1+) */
+body:not(.look-dark){--muted:color-mix(in srgb,var(--ink0) 66%,var(--bg0))}
+/* headlines wrap evenly; paragraphs avoid one-word last lines */
+h1,h2,h3,blockquote{text-wrap:balance}
+p,.empty,li{text-wrap:pretty}
+/* numbers line up */
+.n,.d,.count,.meta,.time,.tm,.stat b,.pchip,.mcell .n,.gd-tm,.prog,.hello-date,.wk-n{font-variant-numeric:tabular-nums}
+/* one main action: inline + buttons go quiet, the round + stays the star */
+.card .plus,.add .plus,.ls-add .plus,.nf-add .plus{background:transparent!important;color:var(--blue)!important;box-shadow:none!important;border:1.5px solid color-mix(in srgb,var(--blue) 30%,transparent)!important}
+.pinkish .plus,.c-personal .plus,.pink .plus{color:var(--pink-text,var(--pink))!important;border-color:color-mix(in srgb,var(--pink) 40%,transparent)!important}
+.card .plus:hover,.add .plus:hover{background:color-mix(in srgb,var(--blue) 8%,transparent)!important}
+/* selected day: flat, no floating shadow */
+.week .day.sel,.wk .sel,.days .sel{box-shadow:none!important}
+/* small line icons that replaced emoji */
+.ico-i{width:1em;height:1em;vertical-align:-.12em}
+.ico-w{display:inline-flex;color:var(--muted)}
+.pk-ic .ico-i{width:22px;height:22px;color:var(--pink-text,var(--pink))}
